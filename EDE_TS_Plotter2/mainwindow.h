@@ -1,0 +1,44 @@
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
+
+#include <QMainWindow>
+#include "qcustomplot.h"
+
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
+
+class MainWindow : public QMainWindow
+{
+    Q_OBJECT
+
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
+    void OpenDir();
+    bool ReadFile(const QString &tempFile, const QString &flag);
+    void PlotEDE();
+    void ClearData();
+
+private slots:
+    void on_actionOpen_triggered();
+    void horzScrollBarChanged(int value);
+
+    void on_window_comboBox_currentTextChanged(const QString &arg1);
+
+     void on_files_comboBox_textActivated(const QString &arg1);
+     void dragEnterEvent(QDragEnterEvent* e);
+     void dropEvent(QDropEvent* e);
+     void on_pushButton_clicked();
+
+     void on_horizontal_radioButton_clicked();
+
+     void on_Vertical_radioButton_clicked();
+
+private:
+    Ui::MainWindow *ui;
+    QVector<double> SampleCounter, Ex, Ey;
+    QPointer<QCPGraph> mGraph1;
+    QPointer<QCPGraph> mGraph2;
+};
+#endif // MAINWINDOW_H
