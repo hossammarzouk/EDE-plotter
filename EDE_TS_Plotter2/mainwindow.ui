@@ -6,14 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1118</width>
-    <height>649</height>
+    <width>1172</width>
+    <height>648</height>
    </rect>
   </property>
   <property name="minimumSize">
    <size>
-    <width>799</width>
-    <height>523</height>
+    <width>1172</width>
+    <height>648</height>
    </size>
   </property>
   <property name="acceptDrops">
@@ -212,6 +212,9 @@
        <property name="currentText">
         <string>1024</string>
        </property>
+       <property name="currentIndex">
+        <number>4</number>
+       </property>
        <item>
         <property name="text">
          <string>64</string>
@@ -339,7 +342,7 @@
        </property>
        <property name="geometry">
         <rect>
-         <x>750</x>
+         <x>970</x>
          <y>40</y>
          <width>171</width>
          <height>23</height>
@@ -361,6 +364,9 @@
        <property name="text">
         <string>Horizontal scroll zoom</string>
        </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
       </widget>
       <widget class="QRadioButton" name="Vertical_radioButton">
        <property name="geometry">
@@ -375,7 +381,36 @@
         <string>Vertical scroll zoom</string>
        </property>
        <property name="checked">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="limits_checkBox">
+       <property name="geometry">
+        <rect>
+         <x>730</x>
+         <y>50</y>
+         <width>101</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Auto scale Y axis</string>
+       </property>
+       <property name="checked">
         <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="reset_pushButton">
+       <property name="geometry">
+        <rect>
+         <x>850</x>
+         <y>40</y>
+         <width>75</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Reset view</string>
        </property>
       </widget>
      </widget>
@@ -387,7 +422,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1118</width>
+     <width>1172</width>
      <height>21</height>
     </rect>
    </property>

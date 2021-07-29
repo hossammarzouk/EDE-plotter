@@ -18,6 +18,8 @@ public:
     void OpenDir();
     bool ReadFile(const QString &tempFile, const QString &flag);
     void PlotEDE();
+    void PlotHDE();
+
     void ClearData();
 
 private slots:
@@ -35,10 +37,14 @@ private slots:
 
      void on_Vertical_radioButton_clicked();
 
+     void on_limits_checkBox_stateChanged(int arg1);
+
+     void on_reset_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
-    QVector<double> SampleCounter, Ex, Ey;
-    QPointer<QCPGraph> mGraph1;
-    QPointer<QCPGraph> mGraph2;
+    QVector<double> SampleCounter, Ex, Ey, Hx, Hy, Hz;
+    QPointer<QCPGraph> mGraph1, mGraph2, mGraph3;
+    int isEDE;
 };
 #endif // MAINWINDOW_H
